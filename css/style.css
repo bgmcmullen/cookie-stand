@@ -1,0 +1,33 @@
+body {
+}
+h1 {
+  text-align: center;
+  font-size: 5vw;
+  color: salmon;
+  background-color: black;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+p {
+  text-align: center;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 30px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+
+.sub-list{
+  list-style-type: circle;
+}
