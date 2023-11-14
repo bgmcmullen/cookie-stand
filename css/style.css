@@ -31,3 +31,11 @@ ul {
 .sub-list{
   list-style-type: circle;
 }
+
+td {
+  padding: 10px;
+}
+
+table, td {
+  border: 1px solid black;
+}

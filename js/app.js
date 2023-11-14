@@ -1,9 +1,28 @@
 'use strict';
 
 //get a window into HMTL file
-let citySection = document.getElementById('city-profiles');
+let cityTable = document.getElementById('city-profiles');
 
 let hours = ['6am', '7am', '8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm', '7pm'];
+
+//add times to top row of table
+function createTimeRow(){
+  let hoursTR = document.createElement('tr');
+  cityTable.appendChild(hoursTR);
+
+  let hourTH = document.createElement('th');
+  hourTH.innerText = 'Locations';
+  hoursTR.appendChild(hourTH);
+  for(let i = 0; i < hours.length; i++){
+    let hourTH = document.createElement('th');
+    hourTH.innerText = hours[i];
+    hoursTR.appendChild(hourTH);
+  }
+  hourTH = document.createElement('th');
+  hourTH.innerText = 'Daily Location Total';
+  hoursTR.appendChild(hourTH);
+  
+}
 
 //create an object for each city
 function City(cityName, minCust, maxCust, avgCookieBought) {
@@ -22,27 +41,25 @@ City.prototype.getCookieNumbers = function(){
   for(let i = 0; i < hours.length; i++){
     let cookies = Math.round(this.randomCustomerGenerator(this.minCust, this.maxCust) * this.avgCookieBought);
     totalCookies += Number(cookies);
-    this.hoursAndCookies.push(`${hours[i]}: ${cookies} cookies`)
+    this.hoursAndCookies.push(cookies);
   }
-  this.hoursAndCookies.push(`Total: ${totalCookies} cookies`)
+  this.hoursAndCookies.push(totalCookies)
 },
 
 City.prototype.render = function(){
   this.getCookieNumbers();
-  let articleEle = document.createElement('article');
-  citySection.appendChild(articleEle);
 
-  let cityHeading = document.createElement('h2'); // html creation
-  cityHeading.innerText = this.name; // context
-  articleEle.appendChild(cityHeading); // dom addition
 
-  let cityUL = document.createElement('ul');
-  articleEle.appendChild(cityUL);
+  let cityTR = document.createElement('tr');
+  cityTable.appendChild(cityTR);
+  let cityTD = document.createElement('td');
+  cityTD.innerText = this.name;
+  cityTR.appendChild(cityTD);
   
   for(let i = 0; i < this.hoursAndCookies.length; i++){
-    let cookiesLI = document.createElement('li');
-    cookiesLI.innerText = this.hoursAndCookies[i];
-    cityUL.appendChild(cookiesLI);
+    let cookiesTD = document.createElement('td');
+    cookiesTD.innerText = this.hoursAndCookies[i];
+    cityTR.appendChild(cookiesTD);
   }
 }
 
@@ -52,6 +69,7 @@ let dubai = new City('Dubai', 11, 38, 3.7);
 let paris = new City('Paris', 20, 38,2.3);
 let lima = new City('Lima', 2, 16, 4.6);
 
+createTimeRow();
 seattle.render();
 tokyo.render();
 dubai.render();
