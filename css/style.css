@@ -5,13 +5,17 @@ h1 {
   font-size: 5vw;
   color: salmon;
   background-color: black;
+  font-style: italic;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 h2 {
   font-size: 20px;
   font-weight: bold;
-  padding-top: 25px;
+  padding-top: 10px;
   padding-bottom: 10px;
+  background-color: salmon;
 }
 
 p {
