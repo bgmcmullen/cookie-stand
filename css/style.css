@@ -49,3 +49,24 @@ th {
   border: 1px solid black;
   padding: 10px;
 }
+
+#top-image{
+width: 70%;
+}
+
+#top-image-container{
+  display: flex;
+  justify-content: center;
+
+}
+
+.bottom-image-container{
+  display: flex;
+  width: 1fr;
+}
+
+.image-container{
+  width: 25%;
+  height: 25%;
+}
+
