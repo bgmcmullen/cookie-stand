@@ -26,12 +26,15 @@ function createTimeRow(){
 }
 
 //create an object for each city
-function City(cityName, minCust, maxCust, avgCookieBought) {
+function City(cityName, minCust, maxCust, avgCookieBought, contactInfo, location) {
   this.name = cityName;
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.avgCookieBought = avgCookieBought;
   this.cookieNumbersByHours = [];
+  this.hoursOpen = '6am - 7pm';
+  this.contactInto = contactInfo;
+  this.location = location;
 }
 City.prototype.randomCustomerGenerator = function(min, max){
   return Math.floor(Math.random() * (max - min + 1) + min); // inclusive min and max - from MDN

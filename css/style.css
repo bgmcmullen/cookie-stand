@@ -62,11 +62,15 @@ width: 70%;
 
 .bottom-image-container{
   display: flex;
-  width: 1fr;
+  width: 100%;
 }
 
 .image-container{
   width: 25%;
   height: 25%;
+}
+
+div.image-container > img {
+  width: 100%;
 }
 
