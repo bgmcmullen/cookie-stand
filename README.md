@@ -5,3 +5,7 @@
 ### Links and Resources
 
 ChatGPT was used as a resource.
+
+### Lighthouse report
+
+![Lighthouse Report](img/Lighthousereport.png)
