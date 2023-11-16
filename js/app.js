@@ -1,8 +1,6 @@
 'use strict';
 
 //get a window into HMTL file
-
-
   let cityTable = document.getElementById('city-profiles');
   let locationDescription = document.getElementById('location-descriptions');
 
@@ -28,6 +26,26 @@ function createTimeRow(){
   hoursTR.appendChild(hourTH);
   
 }
+
+let myForm = document.getElementById('store-form')
+
+function handleSubmit(event){
+  event.preventDefault();
+
+  let cityName = event.target.cityName.value;
+
+  let minCust = event.target.minCust.value;
+  let maxCust = event.target.maxCust.value;
+
+  let avgCust = event.target.avgCust.value;
+
+  let newCity = new City(cityName, minCust, maxCust, avgCust, null, null);
+
+  newCity.render();
+
+}
+
+myForm.addEventListener('submit', handleSubmit);
 
 //create an object for each city
 function City(cityName, minCust, maxCust, avgCookieBought, contactInfo, location) {

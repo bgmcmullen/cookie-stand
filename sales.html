@@ -10,6 +10,26 @@
 <body>
   <header><h1>Welcome to Pat's Salmon Cookies!</h1></header>
   <main>
+    <form id="store-form">
+      <fieldset>
+        <legend>Enter Store Information</legend>
+        
+        <label for="cityName">City: </label><br>
+        <input type="text" id="cityName" name="cityName"><br>
+
+        <label for="minCust">Minimun Customers: </label><br>
+        <input type="number" id="minCust" name="minCust"><br>
+
+        <label for="maxCust">Maximum Customers:</label><br>
+        <input type="number" id="maxCust" name="maxCust"><br>
+
+        <label for="avgCust">Avg Cookie / Sale:</label><br>
+        <input type="number" id="avgCust" name="avgCust"><br>
+        
+      </fieldset>
+      <button type="submit">Submit
+      </button>
+    </form>
     <table id="city-profiles"></table>
 
   </main>
