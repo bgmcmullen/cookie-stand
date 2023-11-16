@@ -27,7 +27,7 @@ function createTimeRow(){
   
 }
 
-let myForm = document.getElementById('store-form')
+let myForm = document.getElementById('store-form');
 
 function handleSubmit(event){
   event.preventDefault();
@@ -41,7 +41,15 @@ function handleSubmit(event){
 
   let newCity = new City(cityName, minCust, maxCust, avgCust, null, null);
 
+  let oldTotals = document.getElementsByClassName('totals');
+
+  for(let i = 0; oldTotals.length; i++){
+    oldTotals[i].remove();
+  }
+ 
   newCity.render();
+  calculateTotal();
+
 
 }
 
@@ -75,10 +83,8 @@ City.prototype.getCookieNumbers = function(){
 
 City.prototype.render = function(){
 
+  this.getCookieNumbers();
   if(cityTable !== null){
-    this.getCookieNumbers();
-
-
     let cityTR = document.createElement('tr');
     cityTable.appendChild(cityTR);
     let cityTD = document.createElement('td');
@@ -129,17 +135,21 @@ function calculateTotal(){
   }
 
   let totalsTR = document.createElement('tr');
+  totalsTR.classList.add("totals")
   cityTable.appendChild(totalsTR);
   
   let totalTH = document.createElement('th');
+  totalTH.classList.add("totals")
   totalTH.innerText = 'Locations';
   totalsTR.appendChild(totalTH);
   for(let i = 0; i < hourTotals.length; i++){
     let totalTH = document.createElement('th');
+    totalTH.classList.add("totals")
     totalTH.innerText = hourTotals[i];
     totalsTR.appendChild(totalTH);
   }
   totalTH = document.createElement('th');
+  totalTH.classList.add("totals")
   totalTH.innerText = combinedTotal;
   totalsTR.appendChild(totalTH);
 }
