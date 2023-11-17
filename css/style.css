@@ -1,11 +1,16 @@
-body {
+html {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  
 }
 
 
 h1 {
   font-family: 'Righteous', sans-serif;
+  font-style: italic;
   text-align: center;
-  font-size: 5vw;
+  font-size: 52px;
   color: salmon;
   background-color: black;
   padding-top: 20px;
@@ -14,10 +19,13 @@ h1 {
 
 h2 {
   font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: salmon;
+  padding-left: 10px;
+  border: 2px solid grey;
 }
 
 h3{
@@ -30,7 +38,9 @@ h3{
 }
 
 p {
-  margin-left: 20px;
+  margin-left: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(99, 37, 37);
 }
 
 ol {
@@ -51,10 +61,15 @@ td {
   padding: 10px;
 }
 
-table, td {
+table {
+width: 1000px;
+}
+
+td{
   border: 1px solid black;
-  
   background-color: salmon;
+  font-family: Arial;
+  font-size: 14px;
 }
 
 th {
@@ -63,13 +78,16 @@ th {
   padding: 10px;
   color: white;
   background-color: grey;
+  font-family: Verdana;
+  font-size: 14px;
 }
 
 #top-image{
-width: 70%;
+  width: 70%;
 }
 
 #top-image-container{
+  border: 2px dashed salmon;
   display: flex;
   justify-content: center;
 }
@@ -86,6 +104,7 @@ input{
 }
 
 #form-section{
+  font-family: Arial;
   display: flex;
 }
 
@@ -93,8 +112,13 @@ form{
   padding: 10px;
   margin: 10px;
   border: 1px solid black;
-  width: 150px;
+  min-width: 250px;
+  width: 250px;
   background-color: antiquewhite;
+}
+
+input{
+  width: 220px;
 }
 
 legend {
@@ -110,6 +134,7 @@ div.middle2-page {
   justify-content: center;
   float: right;
   width: 50%;
+  flex-direction: column;
 }
 
 a{
@@ -117,10 +142,13 @@ a{
 }
 
 footer{
+  font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 30px 0;
   background-color: lightgrey;
   text-align: center;
 
 }
+
+
 
 
