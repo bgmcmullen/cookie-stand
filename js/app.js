@@ -52,8 +52,8 @@ function handleSubmit(event){
 
 
 }
-
-myForm.addEventListener('submit', handleSubmit);
+if(myForm !== null)
+  myForm.addEventListener('submit', handleSubmit);
 
 //create an object for each city
 function City(cityName, minCust, maxCust, avgCookieBought, contactInfo, location) {
