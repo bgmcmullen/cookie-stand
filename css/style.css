@@ -80,5 +80,15 @@ input{
   margin-bottom: 10px;
 }
 
+form{
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+  width: 150px;
+}
+
+legend {
+  margin-bottom: 10px;
+}
 
 
