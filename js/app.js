@@ -92,9 +92,13 @@ City.prototype.render = function(){
     cityTR.appendChild(cityTD);
     
     for(let i = 0; i < this.cookieNumbersByHours.length; i++){
-      let cookiesTD = document.createElement('td');
-      cookiesTD.innerText = this.cookieNumbersByHours[i];
-      cityTR.appendChild(cookiesTD);
+      let cookiesCell = null;
+      if(i === this.cookieNumbersByHours.length - 1)
+        cookiesCell = document.createElement('th');
+      else
+        cookiesCell = document.createElement('td');
+      cookiesCell.innerText = this.cookieNumbersByHours[i];
+      cityTR.appendChild(cookiesCell);
     }
   }
   
