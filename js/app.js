@@ -43,7 +43,7 @@ function handleSubmit(event){
 
   let oldTotals = document.getElementsByClassName('totals');
 
-  for(let i = 0; oldTotals.length; i++){
+  for(let i = 0; i < oldTotals.length; i++){
     oldTotals[i].remove();
   }
  
