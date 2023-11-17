@@ -8,28 +8,33 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header><h1>Welcome to Pat's Salmon Cookies!</h1></header>
+  <header><h1>Welcome to Pat's Salmon Cookies!<div><img src="img/frosted-cookie.jpg" alt="frosted cookie image"><img src="img/fish.jpg" style="max-height: 175px; margin-left: 10px; margin-right: 10px;" alt="fish image"><img src="img/cutter.jpeg" alt="cutter image" style="max-width: 175px;"></div></h1></header>
   <main>
-    <form id="store-form">
-      <fieldset>
-        <legend>Enter Store Information</legend>
-        
-        <label for="cityName">City: </label><br>
-        <input type="text" id="cityName" name="cityName"><br>
+    <h2><a href="index.html">Home</a><a href="sales.html">Sales</a></h2>
+    <section id="form-section">
+      <form id="store-form">
+        <fieldset>
+          <legend>Enter Store Information</legend>
+          
+          <label for="cityName">City: </label><br>
+          <input type="text" id="cityName" name="cityName"><br>
 
-        <label for="minCust">Minimun Customers: </label><br>
-        <input type="number" id="minCust" name="minCust"><br>
+          <label for="minCust">Minimun Customers: </label><br>
+          <input type="number" id="minCust" name="minCust"><br>
 
-        <label for="maxCust">Maximum Customers:</label><br>
-        <input type="number" id="maxCust" name="maxCust"><br>
+          <label for="maxCust">Maximum Customers:</label><br>
+          <input type="number" id="maxCust" name="maxCust"><br>
 
-        <label for="avgCust">Avg Cookie / Sale:</label><br>
-        <input type="number" id="avgCust" name="avgCust" step=".1"><br>
-        
-      </fieldset>
+          <label for="avgCust">Avg Cookie / Sale:</label><br>
+          <input type="number" id="avgCust" name="avgCust" step=".1"><br>
+          
+        </fieldset>
       <button type="submit">Submit
       </button>
     </form>
+    <img id="top-image" src="img/chinook.jpg" style="min-width: 800px; max-width: 800px;" alt="Chinook Salmon image">
+  </section>
+  
     <table id="city-profiles"></table>
 
   </main>

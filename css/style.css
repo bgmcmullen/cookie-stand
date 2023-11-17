@@ -1,11 +1,13 @@
 body {
 }
+
+
 h1 {
+  font-family: 'Righteous', sans-serif;
   text-align: center;
   font-size: 5vw;
   color: salmon;
   background-color: black;
-  font-style: italic;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -19,10 +21,12 @@ h2 {
 }
 
 h3{
+  font-family: 'Righteous', sans-serif;
   font-size: 20px;
   font-weight: bold;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-left: 10px;
 }
 
 p {
@@ -49,12 +53,16 @@ td {
 
 table, td {
   border: 1px solid black;
+  
+  background-color: salmon;
 }
 
 th {
   font-weight: bold;
   border: 1px solid black;
   padding: 10px;
+  color: white;
+  background-color: grey;
 }
 
 #top-image{
@@ -64,20 +72,21 @@ width: 70%;
 #top-image-container{
   display: flex;
   justify-content: center;
-
 }
 
-.bottom-image-container{
-  display: flex;
+div.image-container > img {
   width: 100%;
 }
-
-div.image-cotainer > img {
-  width: 100%;
+section.bottom-image-container > img {
+  margin: 10px;
+  max-width: 500px;
 }
-
 input{
   margin-bottom: 10px;
+}
+
+#form-section{
+  display: flex;
 }
 
 form{
@@ -85,10 +94,33 @@ form{
   margin: 10px;
   border: 1px solid black;
   width: 150px;
+  background-color: antiquewhite;
 }
 
 legend {
   margin-bottom: 10px;
+}
+
+.middle-page {
+  float: left;
+  width: 50%;
+}
+div.middle2-page {
+  display: flex;
+  justify-content: center;
+  float: right;
+  width: 50%;
+}
+
+a{
+  margin-left: 10px;
+}
+
+footer{
+  padding: 30px 0;
+  background-color: lightgrey;
+  text-align: center;
+
 }
 
 
